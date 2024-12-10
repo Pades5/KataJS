@@ -8,15 +8,17 @@ function range(x, y) {
 
 function range2(x, y, z) {
   let creation = [];
-  for (let i = x; i <= y; i++) {
-    creation.push(i);
-  }
-  let arret = z;
-
-  for (let j = 0; j < creation.length; j += arret) {
-    console.log(creation[j]);
-  }
+  if (z < 0) {
+    for (let i = y; i >= x; i--) {
+      creation.push(i);
+    }
+    return creation;
+  } else
+    for (let i = x; i <= y; i++) {
+      creation.push(i);
+    }
+  return creation;
 }
 
-console.log(range2(1, 10, 2));
+console.log(range2(5, 2, -1));
 //console.log(sum(range(1, 10)));
