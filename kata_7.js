@@ -9,7 +9,7 @@ function range(x, y) {
 function range2(x, y, z) {
   let creation = [];
   if (z < 0) {
-    for (let i = y; i >= x; i--) {
+    for (let i = x; i >= y; i--) {
       creation.push(i);
     }
     return creation;
